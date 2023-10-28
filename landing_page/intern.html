@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vertical Sidebar Example</title>
+    <style>
+        /* Define styles for the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        /* Define styles for the content */
+        .content {
+            margin-left: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background-image: url('b.avif'); /* Update with the correct image path */
+            background-size: cover;
+            background-position: center; /* Center the background image */
+            background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent black overlay for a subtle color effect */
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #fff; /* Text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a text shadow for a subtle glitter effect */
+        }
+
+        .content:hover {
+            background-color: #222; /* Change the background color on hover */
+            transition: background-color 0.3s; /* Add a transition effect to smoothly change the background color */
+        }
+
+        .content:hover h1 {
+            transform: scale(1.1); /* Add a scaling effect on hover */
+            transition: transform 0.3s; /* Add a transition effect for the scaling */
+        }
+
+        /* Style for Login and Register sections */
+        .login-section, .register-section {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        .login-section h2, .register-section h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .login-section p, .register-section p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="#bookly">Bookly</a>
+    <a href="internlog.html">Login</a>
+    <a href="jsregister.html">Register</a>
+    <a href="products.html">Product</a>
+    <a href="abouts.html">About</a>
+    
+</div>
+
+<div class="content">
+    <h1>Welcome to Book Zone</h1>
+    <p style="font-size: 24px; color: #fff;">You can find your books here.</p>
+</div>
+
+</body>
+</html>

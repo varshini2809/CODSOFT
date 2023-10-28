@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="logins.css">
+    <style>
+        /* Custom CSS styles can be added here if needed. */
+        body {
+            background-image: url('your-background-image.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom CSS for login and save buttons */
+        .btn-login, .btn-save {
+            background-color: rgba(197, 132, 10, 0.849); /* Match the background color with the desired color (orange) */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* Style for hover effect */
+        .btn-login:hover, .btn-save:hover {
+            background-color: rgba(197, 132, 10, 0.849); /* Change the background color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left Column (Image) -->
+                <div class="col-md-6">
+                    <div class="img-responsive">
+                        <br><br><br>
+                        <img src="b3.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <!-- Right Column (Login Form) -->
+                <div class="col-md-6">
+                    <div class="hello">
+                        <h1>Login</h1>
+                    </div>
+                    <br><br>
+                    <div class="user">
+                        Username : <input name="log" type="text" value="" placeholder="enter your name" class="user1" required>
+                    </div>
+                    <br><br>
+                    <div class="pp">
+                        Password : <input name="pwd" type="password" value="" placeholder="enter your password" required>
+                    </div>
+                    <br><br>
+                    <div class="col-sm-6">
+                        <input type="submit" name="login" value="Login" class="btn-login" id="loginButton">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="submit" name="login" value="Save" formaction="http://localhost:3000/save" class="btn-save">
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function (e) {
+            // Check if the fields are filled before redirecting
+            var username = document.querySelector("input[name='log']").value;
+            var password = document.querySelector("input[name='pwd']").value;
+
+            if (username && password) {
+                // Redirect to the "add to cart" page
+                window.location.href = "add to cart/addtocart.html";
+            } else {
+                // Prevent the default form submission if fields are not filled
+                e.preventDefault();
+                alert("Please fill in all fields before logging in.");
+            }
+        });
+    </script>
+</body>
+
+</html>
